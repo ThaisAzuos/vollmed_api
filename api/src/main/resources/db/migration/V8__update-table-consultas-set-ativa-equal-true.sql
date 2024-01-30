@@ -1,0 +1,1 @@
+update consultas set ativa = 1;
