@@ -23,4 +23,8 @@ public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
             c.data > :dataVerificacao
             """)
     int cancelar24HorasAntes(Long idConsulta, String motivoCancelamento, LocalDateTime dataVerificacao);
+
+     Boolean existsByMedicoIdAndData(Long idMedico, LocalDateTime data);
+
+    Boolean existsByPacienteIdAndDataBetween(Long idPaciente, LocalDateTime primeiroHorario, LocalDateTime ultimoHorario);
 }
